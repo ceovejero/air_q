@@ -1,0 +1,47 @@
+# Dependencias para desarrollo y testing del proyecto ESP32 Air Quality Monitor
+# Este archivo es para referencia y desarrollo, no se instala en el ESP32
+
+# Para desarrollo en PC/testing
+micropython-esp32-stubs>=1.20.0
+esptool>=4.5.1
+
+# Para simulación y testing
+pytest>=7.0.0
+pytest-mock>=3.10.0
+
+# Para análisis de código
+flake8>=6.0.0
+black>=23.0.0
+
+# Para documentación
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.2.0
+
+# Herramientas de deployment
+ampy>=1.1.0
+thonny>=4.0.0
+
+# Para análisis de datos (opcional)
+pandas>=1.5.0
+matplotlib>=3.6.0
+numpy>=1.24.0
+
+# Notas de instalación en ESP32:
+# Los siguientes módulos vienen incluidos en MicroPython:
+# - machine
+# - dht
+# - time
+# - json
+# - struct
+# - os
+# - network
+# - urequests (como requests para MicroPython)
+
+# Módulos adicionales necesarios en ESP32:
+# - ssd1306.py (incluido en el proyecto)
+# - ds1307.py (incluido en el proyecto)
+
+# Para instalar MicroPython en ESP32:
+# pip install esptool
+# esptool.py --chip esp32 erase_flash
+# esptool.py --chip esp32 write_flash -z 0x1000 esp32-micropython.bin
